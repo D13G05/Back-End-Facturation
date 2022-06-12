@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "2a126d77-3223-472c-b040-241416cc7b7c",
+		"name": "ServiciosPruebaTecnicaCrudFacturacion",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18726551"
+	},
+	"item": [
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Registrar Cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"nombre\": \"Diego\",\r\n\t\"apellido\": \"Higuera\",\r\n\t\"direccion\": \"Carrera 21 Duitama\",\r\n\t\"fecha_nacimiento\": \"28/12/1999\",\r\n\t\"telefono\": \"3204929951\",\r\n\t\"email\": \"pruba.test@hotmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/crud/clientes/add",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"crud",
+								"clientes",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Clientes del Sistema",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/crud/clientes/getAll",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"crud",
+								"clientes",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Facturas",
+			"item": [
+				{
+					"name": "Facturas del Sistema",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/crud/clientes/getAll",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"crud",
+								"clientes",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Registrar Factura",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id_cliente\": 3,\r\n\t\"fecha\": \"14/04/2021\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/crud/facturas/add",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"crud",
+								"facturas",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Facturas por Id Cliente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/crud/facturas/getById/7",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"crud",
+								"facturas",
+								"getById",
+								"7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Productos",
+			"item": [
+				{
+					"name": "Registrar Productos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"nombre\": \"Papa\",\r\n\t\"precio\": 1600,\r\n\t\"stock\": 60\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/crud/productos/add",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"crud",
+								"productos",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Productos del Sistema",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/crud/productos/getAll",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"crud",
+								"productos",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Detalles",
+			"item": [
+				{
+					"name": "Registrar Detalles",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"num_factura\": \"4\",\r\n\t\"id_producto\": \"2\",\r\n\t\"cantidad\": 3,\r\n\t\"precio\": 4000\r\n\t\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/crud/detalles/add",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"crud",
+								"detalles",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detalles del Sistema",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "localhost:8080/crud/detalles/getAll",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"crud",
+								"detalles",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Detalles por Id Factura",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/crud/detalles/getById/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"crud",
+								"detalles",
+								"getById",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
